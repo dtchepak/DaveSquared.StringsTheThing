@@ -1,0 +1,10 @@
+#comment
+*.user
+*.suo
+*.orig
+*.swp
+bin/
+obj/
+Output/*
+*.sln.cache
+_site
