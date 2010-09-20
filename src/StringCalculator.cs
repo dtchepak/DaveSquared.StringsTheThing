@@ -4,7 +4,7 @@ namespace DaveSquared.StringsTheThing
 {
     public class StringCalculator
     {
-        public int Add(string numbers)
+        public int Add(string stringOfNumbers)
         {
             throw new NotImplementedException("hmm, needs some work here.");
         }
