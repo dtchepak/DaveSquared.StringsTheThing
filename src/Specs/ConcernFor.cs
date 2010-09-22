@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace DaveSquared.StringsTheThing.Specs
 {
-    public abstract class ConcernFor<T>
+    public abstract class ConcernFor<TSubject>
     {
         [SetUp]
         public void SetUp()
@@ -12,9 +12,9 @@ namespace DaveSquared.StringsTheThing.Specs
             Because();
         }
 
-        protected T Subject { get; set; }
+        protected TSubject Subject { get; set; }
         protected virtual void Context() { }
-        protected abstract T CreateSubject();
+        protected abstract TSubject CreateSubject();
         protected virtual void Because() { }
     }
 }
