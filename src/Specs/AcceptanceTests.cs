@@ -32,12 +32,6 @@ namespace DaveSquared.StringsTheThing.Specs
         }
 
         [Test]
-        public void Return_sum_of_numbers_when_delimited_by_commas_and_newlines()
-        {
-            Assert.That(calculator.Add("1,2\n3,4"), Is.EqualTo(10));
-        }
-
-        [Test]
         [Ignore]
         public void Return_sum_of_numbers_with_custom_delimiter()
         {
