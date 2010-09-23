@@ -2,7 +2,6 @@ using NUnit.Framework;
 
 namespace DaveSquared.StringsTheThing.Specs
 {
-    [Ignore]
     public class AcceptanceTests
     {
         StringCalculator calculator;
@@ -10,7 +9,9 @@ namespace DaveSquared.StringsTheThing.Specs
         [SetUp]
         public void SetUp()
         {
-            calculator = null;
+            var parser = new CalculatorExpressionParser(new ExpressionPartsParser(), new NumberParserFactory());
+            var adder = new Adder();
+            calculator = new StringCalculator(parser, adder);
         }
 
         [Test]
@@ -32,13 +33,6 @@ namespace DaveSquared.StringsTheThing.Specs
         }
 
         [Test]
-        public void Return_sum_of_numbers_when_delimited_by_commas_and_newlines()
-        {
-            Assert.That(calculator.Add("1,2\n3,4"), Is.EqualTo(10));
-        }
-
-        [Test]
-        [Ignore]
         public void Return_sum_of_numbers_with_custom_delimiter()
         {
             Assert.That(calculator.Add("//;\n10;20;30;40"), Is.EqualTo(100));
