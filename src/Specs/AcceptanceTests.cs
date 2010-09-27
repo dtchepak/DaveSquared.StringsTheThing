@@ -2,7 +2,6 @@ using NUnit.Framework;
 
 namespace DaveSquared.StringsTheThing.Specs
 {
-    [Ignore]
     public class AcceptanceTests
     {
         StringCalculator calculator;
@@ -10,7 +9,9 @@ namespace DaveSquared.StringsTheThing.Specs
         [SetUp]
         public void SetUp()
         {
-            calculator = null;
+            var parser = new DelimitedNumberParser();
+            var adder = new Adder();
+            calculator = new StringCalculator(parser, adder);
         }
 
         [Test]

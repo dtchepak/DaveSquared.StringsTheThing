@@ -51,6 +51,7 @@
     <Compile Include="INumberParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specs\AcceptanceTests.cs" />
+    <Compile Include="Specs\AdderSpecs.cs" />
     <Compile Include="Specs\ConcernFor.cs" />
     <Compile Include="Specs\DelimitedNumberParserSpecs.cs" />
     <Compile Include="Specs\StringCalculatorSpecs.cs" />
