@@ -35,11 +35,9 @@ namespace DaveSquared.StringsTheThing.Specs
                 expressionPartsParser = Substitute.For<IExpressionPartsParser>();
                 expressionPartsParser.Parse(expression).Returns(new ExpressionParts(delimiter, remainder));
 
-                var numberParser = Substitute.For<INumberParser>();
-                numberParser.Parse(remainder).Returns(numbers);
-
                 numberParserFactory = Substitute.For<INumberParserFactory>();
-                numberParserFactory.CreateWithDelimiter(delimiter).Returns(numberParser);
+                var numberParser = numberParserFactory.CreateWithDelimiter(delimiter);
+                numberParser.Parse(remainder).Returns(numbers);
             }
             protected override CalculatorExpressionParser CreateSubject()
             {
