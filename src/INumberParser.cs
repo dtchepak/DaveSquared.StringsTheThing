@@ -11,10 +11,17 @@ namespace DaveSquared.StringsTheThing
 
     public class DelimitedNumberParser : INumberParser
     {
+        readonly char _delimiter;
+
+        public DelimitedNumberParser(char delimiter)
+        {
+            _delimiter = delimiter;
+        }
+
         public IEnumerable<int> Parse(string expression)
         {
             return expression
-                .Split(new[] {','}, StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] {_delimiter}, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => int.Parse(x));
         }
     }

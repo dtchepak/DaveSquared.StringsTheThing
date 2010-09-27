@@ -9,7 +9,7 @@ namespace DaveSquared.StringsTheThing.Specs
         [SetUp]
         public void SetUp()
         {
-            var parser = new DelimitedNumberParser();
+            var parser = new DelimitedNumberParser(',');
             var adder = new Adder();
             calculator = new StringCalculator(parser, adder);
         }

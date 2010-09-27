@@ -19,7 +19,7 @@ namespace DaveSquared.StringsTheThing.Specs
 
             protected override DelimitedNumberParser CreateSubject()
             {
-                return new DelimitedNumberParser();
+                return new DelimitedNumberParser(',');
             }
         }
 
