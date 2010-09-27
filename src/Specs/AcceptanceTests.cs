@@ -9,7 +9,7 @@ namespace DaveSquared.StringsTheThing.Specs
         [SetUp]
         public void SetUp()
         {
-            var parser = new DelimitedNumberParser(',');
+            var parser = new CalculatorExpressionParser(new ExpressionPartsParser(), new NumberParserFactory());
             var adder = new Adder();
             calculator = new StringCalculator(parser, adder);
         }
@@ -33,7 +33,6 @@ namespace DaveSquared.StringsTheThing.Specs
         }
 
         [Test]
-        [Ignore]
         public void Return_sum_of_numbers_with_custom_delimiter()
         {
             Assert.That(calculator.Add("//;\n10;20;30;40"), Is.EqualTo(100));

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CalculatorExpressionParser.cs" />
     <Compile Include="ExpressionParts.cs" />
+    <Compile Include="ExpressionPartsParser.cs" />
     <Compile Include="IAdder.cs" />
     <Compile Include="IExpressionPartsParser.cs" />
     <Compile Include="INumberParser.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Specs\CalculatorExpressionParserSpecs.cs" />
     <Compile Include="Specs\ConcernFor.cs" />
     <Compile Include="Specs\DelimitedNumberParserSpecs.cs" />
+    <Compile Include="Specs\ExpressionPartsParserSpecs.cs" />
     <Compile Include="Specs\StringCalculatorSpecs.cs" />
     <Compile Include="StringCalculator.cs" />
   </ItemGroup>
