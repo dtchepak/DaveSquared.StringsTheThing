@@ -13,9 +13,9 @@ namespace DaveSquared.StringsTheThing
             _adder = adder;
         }
 
-        public int Add(string stringOfNumbers)
+        public int Add(string expression)
         {
-            var numbers = _numberParser.Parse(stringOfNumbers);
+            var numbers = _numberParser.Parse(expression);
             return _adder.Add(numbers);
         }
     }

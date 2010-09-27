@@ -47,11 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorExpressionParser.cs" />
+    <Compile Include="ExpressionParts.cs" />
     <Compile Include="IAdder.cs" />
+    <Compile Include="IExpressionPartsParser.cs" />
     <Compile Include="INumberParser.cs" />
+    <Compile Include="INumberParserFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specs\AcceptanceTests.cs" />
     <Compile Include="Specs\AdderSpecs.cs" />
+    <Compile Include="Specs\CalculatorExpressionParserSpecs.cs" />
     <Compile Include="Specs\ConcernFor.cs" />
     <Compile Include="Specs\DelimitedNumberParserSpecs.cs" />
     <Compile Include="Specs\StringCalculatorSpecs.cs" />
