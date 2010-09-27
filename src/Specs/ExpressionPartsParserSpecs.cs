@@ -21,7 +21,7 @@ namespace DaveSquared.StringsTheThing.Specs
             }
         }
 
-        public class WhenParsingExpressionPartsFromAnExpressionWithACustomDelimiter:When_parsing_expression_parts
+        public class When_parsing_expression_parts_from_an_expression_with_a_custom_delimiter : When_parsing_expression_parts
         {
             char delimiter;
             string remainder;
