@@ -4,9 +4,19 @@ namespace DaveSquared.StringsTheThing
 {
     public class StringCalculator
     {
-        public int Add(string stringOfNumbers)
+        readonly INumberParser _numberParser;
+        readonly IAdder _adder;
+
+        public StringCalculator(INumberParser numberParser, IAdder adder)
         {
-            throw new NotImplementedException("hmm, needs some work here.");
+            _numberParser = numberParser;
+            _adder = adder;
+        }
+
+        public int Add(string expression)
+        {
+            var numbers = _numberParser.Parse(expression);
+            return _adder.Add(numbers);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace DaveSquared.StringsTheThing.Specs
             protected override void Context()
             {
                 delimiter = ';';
-                remainder = "the rest of the expressoin";
+                remainder = "the rest of the expression";
                 expression = string.Format("//{0}\n{1}", delimiter, remainder);
             }
         }
